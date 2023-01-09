@@ -5,11 +5,12 @@ function Product({products,addToCart,removeFromCart}) {
     <div className="homepage">
       {products.map((product) => {
         return (
-          <SingleProduct
+          <SingleProduct 
             product={product}
             key = {product.id}
             addToCart = {addToCart}
             removeFromCart = {removeFromCart}      
+            flag = {1}
           />
         );
       })}

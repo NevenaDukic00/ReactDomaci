@@ -1,6 +1,8 @@
 import React from 'react'
+import SingleProduct from './SingleProduct';
 
-function Cart({numProducts}) {
+function Cart({numProducts,products}) {
+  console.log("Na stanju:" + numProducts);
     if (numProducts === 0) {
         return (
           <div className="emptyCart">
@@ -8,7 +10,17 @@ function Cart({numProducts}) {
           </div>
         );
       } else {
-        return <div>{numProducts}</div>
+        console.log("Usao u else");
+       return products.map((product) => {
+          return (
+            <SingleProduct
+              product={product}
+              key = {product.id}
+              flag = {0}
+            />
+          );
+        })
+       // return <div>{numProducts}</div>
     }
     
   
