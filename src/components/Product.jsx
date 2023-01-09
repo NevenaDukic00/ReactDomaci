@@ -1,9 +1,35 @@
 import React from 'react'
 import SingleProduct from './SingleProduct'
-function Product({products,addToCart,removeFromCart}) {
+import $ from "jquery";
+import { BsSearch} from "react-icons/bs";
+
+
+function Product({products,addToCart,removeFromCart,search}) {
+
+  
+ 
   return (
+    
     <div className="homepage">
+
+      <div className="formSearch">
+     
+        <div className="form-div">
+        <input
+                type="text"
+                placeholder="Enter price"
+                name="search"
+                id="search"
+        ></input>
+        <div className='b' onClick={() => search( $("#search").val())}>
+        <BsSearch/>
+        </div>  
+        
+          </div>
+      </div>
+
       {products.map((product) => {
+       
         return (
           <SingleProduct 
             product={product}

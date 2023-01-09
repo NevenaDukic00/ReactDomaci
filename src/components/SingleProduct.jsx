@@ -15,6 +15,12 @@ function SingleProduct({product,addToCart,removeFromCart, flag}) {
 
     {flag === 1 ? <div className="desc">{product.desc}</div> : <></>}
 
+  <div className='p'>
+    <div className='price'>Price: {product.price}</div>
+    <div className='individualTotal'>Total price: {product.total}</div>
+  </div>
+   
+   
     <div className='buttons'>
     {flag===1? <>
       <div className='b' onClick={() => addToCart(product.id)}>
@@ -25,7 +31,7 @@ function SingleProduct({product,addToCart,removeFromCart, flag}) {
     <div className='b' onClick={() => removeFromCart(product.id)}>
     <BsDashLg/>
     </div>
-    </>:( <h4 className="amount">Amount: {product.amount}</h4>)}
+    </>:( <h4 className="amount"> Amount: {product.amount}</h4>)}
 
     
     </div>
