@@ -77,12 +77,13 @@ function FormMy({totalPrice, numProducts}) {
         name="address"
         id="address"
       ></input>
-
-       <div className='price'>Total amount: {numProducts}</div>
+      <div className='price'>Total amount: {numProducts}</div>
       <div className='individualTotal'>Total price: {totalPrice()}</div>
       <input type="submit" className="submit" value="SUBMIT" ></input>
+       
 
       </div>
+      
       
     </form>
   )

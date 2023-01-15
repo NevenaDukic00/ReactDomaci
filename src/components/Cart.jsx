@@ -1,7 +1,5 @@
 import React from 'react'
 import SingleProduct from './SingleProduct';
-import $ from "jquery"
-import jquery from "jquery"
 import FormMy from './FormMy';
 
 function Cart({numProducts,products}) {
